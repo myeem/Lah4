@@ -1,0 +1,85 @@
+<html>
+<head>
+</head>
+<script>
+let user1 = {
+name: "Джон",
+age: 30
+};
+
+user1.sayHi = function() {
+alert("Привет!");
+};
+
+user1.sayHi(); // Привет!
+//2
+let inform = {
+	city: "Moscow",
+	cardNum: "1234",
+	phone: "79684789392",
+	mail: "mahfuzurmyeem@gmail.com",
+	name: "Mahfuzur",
+	surname: "Rahaman"
+};
+alert(inform.name)
+alert(inform.surname)
+alert(inform.phone)
+
+//3
+let user = {
+	name: "Mahfuzur",
+	age: 24,
+	place: 4
+};
+
+let cafe = {
+	name: "Pizzeria",
+	address: "Открытое шоссе, д6",
+	phone: "84992031419"
+};
+
+let order = {
+	kol: 4,
+	chefName: "Vladimir",
+	time: "17:00"
+};
+
+order.sayChef = function() {
+	alert ("Имя повара, который готовит заказ: " + order.chefName);
+};
+
+if (user.place==4 | cafe.name == "Pizzeria"){
+	order.sayChef();
+}
+
+//4
+function User(name) {
+	this.name = name;
+	this.isAdmin = false;
+}
+alert("Одногруппники: ")
+var group=["Гриш", "Элизабет", "Али", "Юлия"]
+for (var i =0; i<4; i++){
+	let user = new User (group[i]);
+	alert(user.name)
+}
+//5
+function User(name) {
+	this.name = name;
+	this.phone = "79684789392";
+	this.sayHi = function() {
+		alert( "Меня зовут: " + this.name );
+	};
+	this.sayPhone = function () {
+		alert("Мой телефон: " + this.phone)
+	};
+}
+
+let Mahfuzur = new User("Махфузур");
+
+Mahfuzur.sayHi(); // Меня зовут: Махфузур
+Mahfuzur.sayPhone();
+
+
+</script>
+</html>
